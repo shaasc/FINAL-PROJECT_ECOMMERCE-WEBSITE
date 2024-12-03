@@ -1,0 +1,206 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/homepage/style.css">  
+    <link rel="stylesheet" href="/homepage/CheckoutDetails/checkout.css">
+
+</head>
+<body>
+    <!--------------------------- NAVIGATION MENU --------------------------------->
+    <header>
+        <a href="/homepage/index.html" class="logo"><img src="/images/ramosderosas_logo.png" alt="" width="200"></a>
+
+        <ul class="nav_menu">
+            <li><a href="/homepage/index.html">home</a></li>
+            <li><a href="/homepage/Shop/shop.html">shop</a></li>
+            <li><a href="#footer_section">about us</a></li>
+        </ul>
+
+        <div class="nav_icon">
+            <a href=""><i class='bx bx-search' id="search_icon"></i></a>
+            <a href="/login/sign in.html"><i class='bx bx-user'></i></a>
+            <button class="cart_button"><i class='bx bx-cart' id="cart_icon"></i><span class="count-cart-items">0</span></button>
+            <div class="bx bx-menu" id="menu_icon"></div>
+        </div>
+
+        <div class="search_bar">
+            <input type="text" placeholder="Search...">
+            <button id="close_search"><i class='bx bx-x'></i></button>
+        </div>
+    </header>
+
+    <div class="overlay"></div>
+    <!--------------------------- BREADCRUMB --------------------------------->
+    <nav class="breadcrumb1">
+        <div class="center_text">
+            <div>
+                <a href="/homepage/index.html">Home /</a> 
+                <a href="/homepage/Shop/shop.html">Shop /</a> 
+            </div>
+            <h2>Checkout</h2>
+         </div>    
+    </nav>
+
+     <!--------------------------- ORDER COMPLETE --------------------------------->
+        <div class="order-complete">
+            <nav class="breadcrumb2">
+                <div class="center_text2">
+                    
+                    <h2>THANK YOU!</h2>
+                 </div>    
+            </nav>
+        <div class="order-information">
+            <p>We are getting started on your order right away, and you will receive an order<br>
+                confirmation email shortly. In the meantime, explore more of our beloved bouquets,<br>
+             just head over to <a href="/homepage/Shop/shop.html">Our Shop</a></p>
+             <a href="/homepage/Shop/shop.html">
+                <button>GO BACK SHOPPING</button>
+            </a>        
+        </div>
+        <div class="info-boxes">
+            <div class="box">
+                <ion-icon name="cube-outline" class="icon"></ion-icon>
+                <h3>DELIVERY</h3>
+            </div>
+            <div class="box">
+                <ion-icon name="card-outline" class="icon"></ion-icon>            
+              <h3>PAYMENTS</h3>
+            </div>
+            <div class="box">
+                <ion-icon name="car-outline" class="icon"></ion-icon>            
+                <h3>RETURNS</h3>
+            </div>
+            <div class="box">
+                <ion-icon name="chatbox-ellipses-outline" class="icon"></ion-icon>            
+                <h3>CONTACT</h3>
+            </div>
+        </div>
+            
+       
+    
+    </div>
+
+     <!--------------------------- PRODUCT DEAILS --------------------------------->
+     <div class="checkout_container">
+        
+        <div class="checkout-wrapper">
+            <!-- Billing Information Column -->
+            <div class="billing-info">
+                <div class="checkout-section">
+                    <h2>Billing Information</h2>
+                    <form>
+                        <label class="form-label" for="full-name">Full Name</label>
+                        <input type="text" id="full-name" class="form-input" placeholder="John Doe" required>
+    
+                        <label class="form-label" for="email">Email</label>
+                        <input type="email" id="email" class="form-input" placeholder="you@example.com" required>
+    
+                        <label class="form-label" for="address">Shipping Address</label>
+                        <input type="text" id="address" class="form-input" placeholder="123 Main St, City, Country" required>
+    
+                        <label class="form-label" for="phone">Contact Number</label>
+                        <input type="text" id="phone" class="form-input" placeholder="123-456-7890" required>
+                    </form>
+                </div>
+    
+                <div class="checkout-section">
+                    <h2>Payment Method</h2>
+                    <form>
+                        <label class="form-label" for="payment-method">Choose Payment Method</label>
+                        <select id="payment-method" class="form-input" placeholder="Select">
+                            <option value="" disabled selected>Select a payment method</option>
+                            <option value="gcash">GCash | 09196944838 Sha Sha Ramos</option>
+                            <option value="paymaya">PayMaya | 09192939939 Sha Sha Ramos </option>
+                        </select>
+                       
+    
+                        <!-- File Upload for Receipt -->
+                        <label class="form-label" for="receipt-upload">Attach Receipt (GCash/PayMaya)</label>
+                        <input type="file" id="receipt-upload" class="form-input" accept="image/jpeg, image/png, image/jpg" required>
+
+                        <button class="checkout_button" id="place_order" type="button">Place Order</button>
+
+                    </form>
+                </div>
+            </div>
+    
+           <!-- Order Review Form -->
+           <div class="order-review">
+            <div class="order-review-title">
+                <h2>Review Your Order</h2>
+                <a class="view-cart" id="cart_icon">View Cart</a>
+            </div>
+            
+            <div class="checkout-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+        
+            <!-- Checkout Details Section (Fixed) -->
+            <div class="checkout-btn">
+                <div class="checkout_subtotal">
+                    <span>Subtotal:</span>
+                    <span>₱0.00</span>  <!-- This will be updated dynamically -->
+                </div>
+                <div class="shipping_fee">
+                    <span>Shipping:</span>
+                    <span>₱0.00</span>  <!-- You can add shipping cost logic here -->
+                </div>
+                <div class="apply">
+                    <input type="text" placeholder="Discount or gift card">
+                    <button>Apply</button>
+                </div>
+                <div class="checkout_total">
+                    <span>Total:</span>
+                    <span>₱0.00</span>  <!-- This will be updated dynamically -->
+                </div>
+            </div>
+        </div>
+
+        </div>         
+    </div>
+    
+    <!--------------------------- WEBSITE FOOTER --------------------------------->
+    <footer class="website-footer" id="footer_section">
+            <div class="footer-column">
+              <h3>ABOUT US</h3>
+              <p>We are a team of passionate florists dedicated to enhancing your special moments through beautiful, handcrafted flower bouquets.</p>
+            </div>
+            <div class="footer-column">
+              <h3>ADDRESS</h3>
+              <p>250 Executive Park Blvd, Suite 3400
+                San Francisco CA 94134
+                United States</p>
+            </div>
+            <div class="footer-column">
+              <h3>CONTACTS</h3>
+              <p><i class="fa fa-phone"></i> +123 456 7890</p>
+              <p><i class="fa fa-envelope"></i> rizonshasha@gmail.com</p>
+              <p>
+                <i class='bx bxl-facebook-square' id="fb-link-icon"></i>
+                <a href="https://www.facebook.com/yourprofile" class="fb-link" target="_blank">
+                  Visit us on Facebook
+                </a>            
+              </p>    
+            </div>
+    </footer>
+
+<script src="/homepage/java.js"></script>
+<script src="/homepage/CheckoutDetails/checkout.js"></script>
+
+
+
+
+
+</body>
+</html>

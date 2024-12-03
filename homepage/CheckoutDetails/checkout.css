@@ -1,0 +1,432 @@
+/* CHECKOUT DETAILS | CHECKOUT DETAILS CHECKOUT DETAILS CHECKOUT DETAILS CHECKOUT DETAILS CHECKOUT DETAILS CHECKOUT DETAILS  */
+.checkout_container {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: flex;
+}
+
+.checkout-container.hide{
+    display: none;
+}
+
+.checkout_container h1{
+text-align: center;
+}
+
+.checkout-section {
+    margin-bottom: 20px;
+}
+
+.checkout-section h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #301d02;
+}
+.form-label {
+    font-weight: 500;
+    color: #301d02;
+}
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #111;
+}
+.checkout_button {
+    background-color: #b68a4f;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.checkout-btn span{
+    color: #301d02;
+
+}
+.checkout_button:hover {
+    background-color: #4a2d01;
+}
+
+.order-review {
+    position: relative;
+    flex: 1;
+    max-width: 450px; /* Maximum width to make it slimmer */
+    min-height: auto;
+    background-color: #fdfdfd;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    
+}
+
+.order-review-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-review-title a{
+margin-top: 20px;
+margin-right: 10px;
+font-size: 14px;
+color: #301d02;
+text-decoration: underline !important;
+}
+
+.order-review-title a:hover{
+    color: #b68a4f;
+    cursor: pointer;
+}
+.checkout-items {
+    display: flex; 
+    flex-direction: column; 
+    margin-left: 0;
+    padding: 15px;
+    min-height: 200px;
+    overflow-y: auto;
+    max-height: 1000px;
+}
+
+.cart_item{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.checkout_btn{
+    margin: 10px 0 0 15px;
+
+}
+.checkout-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+.checkout-item span {
+    font-size: 14px;
+}
+.checkout_total {
+    font-size: 18px;
+    font-weight: bold;
+}
+/* Flexbox Layout for Two Columns */
+.checkout-wrapper {
+    display: flex;
+    gap: 30px;
+    padding: 10px 10%;
+
+}
+.billing-info {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .checkout-wrapper {
+        flex-direction: column;
+    }
+}
+
+.checkout_total {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    flex-shrink: 1; /* Allow it to shrink when there's limited space */
+
+}
+
+.checkout_subtotal {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.shipping_fee{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Heading of the order review */
+.order-review h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #301d02;
+    margin: 10px 0 0 15px;
+}
+
+
+.apply {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.apply input {
+    width: 60%; /* Makes the input field take full width */
+    padding: 10px;
+    margin: 10px 0 0 15px;
+    font-size: 16px;
+    color: #301d02;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Add space between input and button */
+}
+
+input{
+    border: 1px solid #ddd;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: #301d02;
+}
+
+input:focus{
+    border: 1px solid #301d02;
+    color: #301d02;
+}
+
+.payment-method select{
+    border: 1px solid #301d02;
+    color: #301d02;
+}
+
+select:focus{
+    border: 1px solid #301d02;
+    outline: none;
+}
+
+.apply button {
+    margin-left: 20;
+    width: 40%; /* Makes the button take full width */
+    padding: 10px;
+    height: 45px;
+    margin: 10px 15px 0 15px;
+    background-color: #b68a4f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.apply button:hover{
+    background-color: #4a2d01;
+}
+
+.price_quantity{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+.cart_item_price{
+    margin-left: -20px !important;
+}
+
+.cart_item_quan{
+    font-size: 14px;
+    color: #4a2d01;
+}
+
+.cart_item_image{
+    margin-top: 20px ;
+    margin-left: 15px;
+}
+
+.breadcrumb1 a{
+    color: #4a2d01;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.breadcrumb1 a:hover{
+    color: #301d02;
+}
+
+.center_text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    flex-direction: column;
+}
+
+.center_text h2 {
+    display: inline-block; 
+    align-items: start;
+    font-size: 40px;
+    color: #301d02;
+}
+
+.center_text p{
+    margin-bottom: 0; 
+    color: #4a2d01;
+}
+
+.center_text2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    flex-direction: column;
+}
+
+.center_text2 h2 {
+    margin-top: 70px;
+    margin-bottom: 20px;
+    display: inline-block; 
+    align-items: start;
+    font-size: 40px;
+    color: #301d02;
+}
+
+.center_text2 p{
+    color: #4a2d01;
+    margin-top: 10px;
+}
+
+.breadcrumb2 a{
+    color: #4a2d01;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+.breadcrumb2 a:hover{
+    color: #301d02;
+}
+
+.order-complete{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10%;
+}
+
+.order-complete.show{
+    display: block;}
+
+.order-complete p{
+   font-size: 15px;
+   text-align: center;
+}
+
+.order-complete a{
+    font-size: 15px;
+    color: #301d02;
+    text-decoration: underline !important;
+    cursor: pointer;
+ }
+
+ .order-complete a:hover{
+    color: #b68a4f;
+ }
+.order-complete button{
+    font-size: 15px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px ;
+    background-color: #b68a4f;
+    border: none;
+    color: #fff;
+    width: 220px;
+ }
+
+ .order-complete button:hover{
+    background-color: #4a2d01;
+    cursor: pointer;
+
+ }
+
+.info-boxes {
+    display: flex;
+    justify-content: center; 
+    margin-right: 10px;
+    align-items: center; 
+    padding: 10px 20%;
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+.box {
+    background-color: #fff; /* Light gray background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Internal padding for content */
+    text-align: center; /* Center text and icon */
+    width: 120px;
+    margin: 0 10px; /* Space between boxes */
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Logo styling */
+.box .icon {
+    width: 25px; /* Set a fixed width for icons */
+    height: 25px; /* Set a fixed height for icons */
+    margin-bottom: 10px; /* Add space below the icon */
+    color: #301d02;
+}
+
+/* Box heading */
+.box h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333; /* Dark text color */
+    margin: 0; /* Remove default margin */
+}
+
+.order-information{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+/* Responsive design */
+@media (max-width: 768px) {
+    .info-boxes {
+        flex-direction: column; /* Stack boxes vertically on smaller screens */
+        padding: 10px;
+    }
+    .box {
+        margin: 10px 0; /* Add space between vertical boxes */
+    }
+}
+
+

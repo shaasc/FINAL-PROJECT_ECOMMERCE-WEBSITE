@@ -1,0 +1,182 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="/homepage/style.css">
+    <link rel="stylesheet" href="/homepage/Shop/shop.css">
+
+
+</head>
+<body>
+    <!--------------------------- NAVIGATION MENU --------------------------------->
+    <header>
+        <a href="/homepage/index.html" class="logo"><img src="/images/ramosderosas_logo.png" alt="" width="200"></a>
+
+        <ul class="nav_menu">
+            <li><a href="/homepage/index.html">home</a></li>
+            <li><a href="/homepage/Shop/shop.html">shop</a></li>
+            <li><a href="#footer_section">about us</a></li>
+        </ul>
+
+        <div class="nav_icon">
+            <a href=""><i class='bx bx-search' id="search_icon"></i></a>
+            <a href="/login/sign in.html"><i class='bx bx-user'></i></a>
+            <button class="cart_button"><i class='bx bx-cart' id="cart_icon"></i><span class="count-cart-items">0</span></button>
+            <div class="bx bx-menu" id="menu_icon"></div>
+        </div>
+
+        <div class="search_bar">
+            <input type="text" placeholder="Search...">
+            <button id="close_search"><i class='bx bx-x'></i></button>
+        </div>
+    </header>
+
+    <div class="overlay"></div>
+    
+    <nav class="breadcrumb">
+        <div class="center_text">
+            <a href="/homepage/index.html">Home /</a> 
+            <h2>All Products</h2>
+            <p class="total_products"></p>
+         </div>    
+    </nav>
+      
+    <!--------------------------- PRODUCT SECTION --------------------------------->
+     <section class="product_container" id="products">     
+        <div class="shop-filter">
+            <!-- Left Sidebar for Color Filter -->
+            <div class="filter-sidebar">
+                <h3>Colors</h3>
+                    <!-- Example color options (replace with your actual color images) -->
+                    <div class="color-options">
+                        <img src="/images/all.png" alt="All" class="color-filter" data-color="all">
+                        <img src="/images/red.png" alt="Red" class="color-filter" data-color="red">
+                        <img src="/images/orange.png" alt="Purple" class="color-filter" data-color="purple">
+                        <img src="/images/green.png" alt="Green" class="color-filter" data-color="green">
+                        <img src="/images/pink.png" alt="Pink" class="color-filter" data-color="pink">
+                        <img src="/images/blue.png" alt="Blue" class="color-filter" data-color="blue">
+                        <img src="/images/yellow.png" alt="Yellow" class="color-filter" data-color="yellow">
+                        <img src="/images/black.png" alt="Black" class="color-filter" data-color="black">
+                        <img src="/images/brown.png" alt="Brown" class="color-filter" data-color="brown">
+                    </div>                   
+            </div>
+    
+            <!-- Product Sorting Dropdown -->
+            <div class="sort-dropdown">
+                <label for="sort-products">Sort by</label>
+                <select id="sort-products">
+                    <option value="">All</option>
+                    <option value="price-low-to-high">Price: Low to High</option>
+                    <option value="price-high-to-low">Price: High to Low</option>
+                    <option value="popularity">Popularity</option>
+                </select>
+            </div>
+        </div>
+    </div>
+        <!--------------------------- PRODUCT CARDS --------------------------------->
+        <div class="shop-section">
+            <div class="products">
+                <!-- products will be displayed here    -->
+            </div>
+
+            <p class="no-products-message">No products available.</p>
+
+        </div>
+     </section>
+    
+
+     <div class="cart_overlay"></div>
+
+     <!--------------------------------SIDECART------------------------>
+     <div class="sidecart">
+        <div class="cart_content">
+        <!-- Cart Header -->
+        <div class="cart_header">
+            <div class="cart_title">
+                <h2>Your Cart<span class="cart_total_items"> (0)</span></h2>
+            </div>
+            <span id="close_btn" class="close_btn">&times;</span> <!-- Close button -->        
+        </div>
+
+        <!-- Cart Items -->
+        <div class="cart_items">
+         <!-- Cart Items from json cart here -->
+
+        </div>
+
+        <!-- Cart Footer -->
+     <div class="cart_btn">
+      <div class="total_amount">
+          <p class="total_text">TOTAL:</p>
+          <span id="total_price" class="total_price">$41.48</span>
+      </div>
+      <button class="checkout_btn">CHECKOUT</button>
+     </div>
+
+    
+       </div>        
+        </div>
+
+
+    <!------------------ STATS ------------------------->  
+    <hr class="product_hr">
+     <div class="product_stats-container">
+        <div class="product_stat">
+            <div class="product_stat-value">FREE SHIPPING</div>
+            <div class="product_stat-label">Nationwide</div>
+        </div>
+        <div class="product_stat">
+            <div class="product_stat-value">ONLINE PAYMENT</div>
+            <div class="product_stat-label">Gcash, Paymaya</div>
+        </div>
+        <div class="product_stat">
+            <div class="product_stat-value">CUSTOMER SERVICE</div>
+            <div class="product_stat-label">24/7 Customer Support</div>
+        </div>
+    </div>
+
+    <!------------------ WEBSITE FOOTER ------------------------->  
+     <footer class="website-footer" id="footer_section">
+        <div class="footer-column">
+          <h3>ABOUT US</h3>
+          <p>We are a team of passionate florists dedicated to enhancing your special moments through beautiful, handcrafted flower bouquets.</p>
+        </div>
+        <div class="footer-column">
+          <h3>ADDRESS</h3>
+          <p>250 Executive Park Blvd, Suite 3400
+            San Francisco CA 94134
+            United States</p>
+        </div>
+        <div class="footer-column">
+          <h3>CONTACTS</h3>
+          <p><i class="fa fa-phone"></i> +123 456 7890</p>
+          <p><i class="fa fa-envelope"></i> rizonshasha@gmail.com</p>
+          <p>
+            <i class='bx bxl-facebook-square' id="fb-link-icon"></i>
+            <a href="https://www.facebook.com/yourprofile" class="fb-link" target="_blank">
+              Visit us on Facebook
+            </a>            
+          </p>
+        </div>
+    </footer>
+      
+      <script src="/homepage/java.js"></script>
+      <script src="/homepage/Shop/shop.js"></script>
+      <script src="/homepage/ProductDetails/prod-details.js"></script>
+      <script src="/homepage/CheckoutDetails/checkout.js"></script>
+
+
+
+
+
+</body>
+</html>
