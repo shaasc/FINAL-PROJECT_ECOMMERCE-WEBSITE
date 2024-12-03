@@ -1,0 +1,551 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+/* =========== Set default color =========== */
+:root {
+    --pink: #FFB6C1;
+    --white: #fff;
+    --black: #222;
+    --gray: #999;
+    --hoverPink: #f3dbdf;
+    --semigray: #e7e7e7b4;
+    --success: #00ff00;
+    --add: #003cff;
+}
+
+/* Main container to position elements relatively */
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.payment{
+    background-color: #FFB6C1;
+    text-align: start;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 900px;
+    height: 600px;    
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout i{
+    color: #111;
+    font-size: 30px;
+}
+
+.logout i:hover{
+    color: red;
+    font-size: 30px;
+}
+
+.logout{
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+}
+
+
+.order-data{
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.order-details.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.order-details .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.order-details .header .title h4 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.order-details .header .buttonX {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+    font-size: 1.2rem;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.order-details .header .buttonX:hover {
+    text-decoration: underline;
+}
+
+.order-details .table-details {
+    height: 500px;
+    width: 80%;
+    padding: 10px 0;
+    margin-top: 20px;    
+}
+
+.order-details .table-details table {
+    width: 100% ;
+    border-collapse: collapse;
+    max-height: 900px;
+    
+}
+
+.order-details .table-details th,
+.order-details .table-details td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.order-details .table-details th {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.order-details .table-details tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.order-details .table-details tr:hover {
+    background-color: #f1f1f1;
+}
+
+.order-details .table-details td img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.footer1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer1 button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.footer .btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.footer .btn-danger:hover {
+    background-color: #c82333;
+}
+
+.footer .btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.footer .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Close button styles */
+.buttonX {
+    font-size: 1.2rem;
+    color: #dc3545;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dark overlay when popup is active */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.pageheader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titleh2{
+    font-size: 30px;
+font-weight: 600;
+margin-top: 50px;
+margin-left: 40px;
+}
+
+/* Order content positioning below order-details */
+.order-content {
+    margin: 10px;
+    padding: 10px 5%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    flex-direction: column;
+}
+
+/* Table design */
+.main .product-content {
+    margin: 10px;
+    position: absolute;
+}
+
+.main{
+    position: relative;
+}
+
+.main .order-content .table{
+    border-collapse: collapse; /* Ensures borders between cells are merged */
+    width: 100%; /* Make the table take full width */
+    margin-top: 150px;
+}
+
+
+.main .order-content .table td,
+.main .order-content .table th {
+    background-color: transparent;
+}
+
+.order-content .pageheader h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.table-details{
+    background-color: var(--white);
+    width: 70%;
+    height:60%;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+/* ============= for close button =============== */
+
+/* From Uiverse.io by javierBarroso */ 
+.buttonX {
+    position: relative;
+    width: 2em;
+    height: 2em;
+    border: none;
+    background: rgba(180, 83, 107, 0.11);
+    border-radius: 5px;
+    transition: background 0.5s;
+  }
+  
+  .X {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2em;
+    height: 1.5px;
+    background-color: rgb(255, 255, 255);
+    transform: translateX(-50%) rotate(45deg);
+  }
+  
+  .Y {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2em;
+    height: 1.5px;
+    background-color: #fff;
+    transform: translateX(-50%) rotate(-45deg);
+  }
+  
+  .close {
+    position: absolute;
+    display: flex;
+    padding: 0.8rem 1.5rem;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%);
+    top: -70%;
+    left: 50%;
+    width: 3em;
+    height: 1.7em;
+    font-size: 12px;
+    background-color: rgb(19, 22, 24);
+    color: rgb(187, 229, 236);
+    border: none;
+    border-radius: 3px;
+    pointer-events: none;
+    opacity: 0;
+  }
+  
+  .buttonX:hover {
+    background-color: rgb(211, 21, 21);
+  }
+  
+  .buttonX:active {
+    background-color: rgb(130, 0, 0);
+  }
+  
+  .buttonX:hover > .close {
+    animation: close 0.2s forwards 0.25s;
+  }
+  
+  @keyframes close {
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+  /* ===== adjust the header =========== */
+  .title{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* ============= for order details ============== */
+  
+  .scroll-bg{
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
+  }
+  
+  .scroll-div{
+    width: 100%;
+    height: 300px;
+    overflow-y: scroll;
+  }
+
+  .header{
+    box-shadow: 1px 10px 10px rgba(0,0,0,0.1);
+    margin-bottom: 5px;
+  }
+
+  .footer {
+    position: relative;
+    height: 100px; /* Adjust height as needed */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+ }
+ 
+ .footer .btn {
+    margin-left: 10px; /* Spacing between buttons */
+ }
+
+ .table-group-divider1{
+    overflow-y: auto;
+ }
+.status-container {
+  margin-top: 10px;
+  max-width: 10%;
+  margin: auto;
+  position: absolute;
+  justify-content: end;
+  align-items: flex-end;
+  right: 2%;
+  top: 10px;
+  z-index: 100;
+  opacity: 1;
+} 
+
+.table-group-divider{
+  display: block !important;
+}
+
+.receipt-container {
+    position: relative;
+    display: none;
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;  /* Adjust if needed */
+}
+
+.receipt-container.show{
+    display: block;
+}
+#receiptImage {
+    width: auto;
+    height: 100%;
+    margin-top: 20px;
+    margin-left: 100px;
+    display: block;
+    margin: 0 auto;  /* Centers the image horizontally */
+}
+
+#return {
+    position: absolute;
+    top: 50%;
+    right: 100px;  /* Adjust the distance from the right side */
+    transform: translateY(-50%);  /* Vertically centers the icon */
+    font-size: 40px;
+    color: #000;  /* Set the icon color as needed */
+    cursor: pointer;
+}
+
+#return.hide{
+    display: none;
+}
+#return:hover{
+    color: salmon;
+    cursor: pointer;
+    
+}
+.order-table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 8px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.order-table thead {
+    background-color: #FFB6C1;
+    color: white;
+}
+
+.order-table th {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.order-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.order-table tbody tr:hover {
+    background-color: #fff2f4;
+}
+
+.btn-primary {
+    background-color: #eb6276;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.table-group-divider2 td, .table-group-divider2 th {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 767px) {
+    .order-table th, .order-table td {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .btn-primary {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.btn {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+.btn-danger {
+    background-color: red;
+    color: white;
+}
+.btn-secondary {
+    background-color: gray;
+    color: white;
+}
+
+

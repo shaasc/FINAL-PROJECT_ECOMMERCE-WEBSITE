@@ -1,0 +1,430 @@
+* {
+    font-family: "Jost", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+/* =========== Set default color =========== */
+:root {
+    --pink: #FFB6C1;
+    --white: #fff;
+    --black: #222;
+    --gray: #999;
+    --hoverPink: #f3dbdf;
+    --semigray: #e7e7e7b4;
+}
+
+/* ===================== body design ===================== */
+
+body {
+    display: block;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--semigray);
+}
+
+iframe {
+    width: 100%;
+    height: 100vh;
+    border: none;
+}
+
+.container {
+    position: absolute;
+    display: contents;
+    width: 100%;
+}
+
+/* ===================== navigation design ===================== */
+.navigation {
+    position: fixed;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    width: 300px;
+    height: 100%;
+    background-color: var(--white);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.logout i{
+    color: #111;
+    font-size: 30px;
+}
+
+.logout i:hover{
+    color: red;
+    font-size: 30px;
+}
+
+.logout{
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+}
+
+
+.navigation ul {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-left: 0;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.navigation ul li {
+    position: flex;
+    width: 100%;
+    font-size: 25px;
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation ul li a {
+    display: flex;
+    position: relative;
+    align-items: center;
+    text-decoration: none;
+    color: var(--black);
+    text-align: center;
+    justify-content: flex-start;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    min-width: 60px;
+    text-align: center;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    min-width: 60px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* for active nav */
+.navigation ul li a.active {
+    background-color: var(--pink);
+}
+
+
+/* ======================== Set the shop logo ============================ */
+.shop-logo {
+    display: flex;
+    width: 100%;
+    margin-left: 70px;
+    margin-top: 10px;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop-logo img {
+    display: block;
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    transition: 0.5s;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ============ for main ============ */
+.main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    transition: 0.5s;
+    height: 100vh;
+}
+
+.main.active {
+    width: calc(100% - 60px);
+    left: 60px;
+}
+
+.main .topbar {
+    display: flex;
+    position: relative;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    padding: 15px;
+}
+
+.main .topbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =============  for search ================= */
+
+
+/* From Uiverse.io by alexruix */
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    width: 50%;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+}
+
+.input::placeholder {
+    color: #9e9ea7;
+}
+
+.input:focus,
+input:hover {
+    outline: none;
+    border-color: rgba(234, 76, 137, 0.4);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+}
+
+.icons {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+}
+
+
+/* =========== if mobile preview  ============ */
+
+@media (max-width: 320px) {
+    .navigation {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        width: 60px;
+        height: 100%;
+        background-color: var(--white);
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    .shop-logo {
+        display: none;
+        width: 100%;
+        margin-left: 20px;
+        height: 90px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .shop-logo img {
+        background-image: none;
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+        transition: 0.5s;
+    }
+    .topbar{
+        left: 10px;
+    }
+    .main {
+        position: absolute;
+        width: calc(100% - 60px);
+        left: 60px;
+        transition: 0.5s;
+        height: 100vh;
+    }
+    
+    .main.active {
+        width: calc(100% - 60px);
+        left: 60px;
+    }
+    
+    .main .topbar {
+        display: flex;
+        position: relative;
+        height: 50px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        padding: 15px;
+    }
+    
+    .main .topbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .group {
+        display: flex;
+        line-height: 28px;
+        align-items: center;
+        position: relative;
+        width: 80%;
+    }
+    
+    .input {
+        width: 100%;
+        height: 40px;
+        line-height: 28px;
+        padding: 0 1rem;
+        padding-left: 2.5rem;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        outline: none;
+        background-color: #f3f3f4;
+        color: #0d0c22;
+        transition: .3s ease;
+    }
+    
+    .input::placeholder {
+        color: #9e9ea7;
+    }
+    
+    .input:focus,
+    input:hover {
+        outline: none;
+        border-color: rgba(234, 76, 137, 0.4);
+        background-color: #fff;
+        box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+    }
+    
+    .icons {
+        position: absolute;
+        left: 1rem;
+        fill: #9e9ea7;
+        width: 1rem;
+        height: 1rem;
+    }
+    
+}
+
+/* =========== if mobile preview 420 ============ */
+
+@media (max-width: 879px) {
+    .navigation {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        width: 60px;
+        height: 100%;
+        background-color: var(--white);
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    .shop-logo {
+        display: none;
+        width: 100%;
+        margin-left: 20px;
+        height: 90px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .shop-logo img {
+        background-image: none;
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+        transition: 0.5s;
+    }
+    .topbar{
+        left: 10px;
+    }
+    .main {
+        position: absolute;
+        width: calc(100% - 60px);
+        left: 60px;
+        transition: 0.5s;
+        height: 100vh;
+    }
+    
+    .main.active {
+        width: calc(100% - 60px);
+        left: 60px;
+    }
+    
+    .main .topbar {
+        display: flex;
+        position: relative;
+        height: 50px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        padding: 15px;
+    }
+    
+    .main .topbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .group {
+        display: flex;
+        line-height: 28px;
+        align-items: center;
+        position: relative;
+        width: 80%;
+    }
+    
+    .input {
+        width: 100%;
+        height: 40px;
+        line-height: 28px;
+        padding: 0 1rem;
+        padding-left: 2.5rem;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        outline: none;
+        background-color: #f3f3f4;
+        color: #0d0c22;
+        transition: .3s ease;
+    }
+    
+    .input::placeholder {
+        color: #9e9ea7;
+    }
+    
+    .input:focus,
+    input:hover {
+        outline: none;
+        border-color: rgba(234, 76, 137, 0.4);
+        background-color: #fff;
+        box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+    }
+    
+    .icons {
+        position: absolute;
+        left: 1rem;
+        fill: #9e9ea7;
+        width: 1rem;
+        height: 1rem;
+    }
+    
+}
